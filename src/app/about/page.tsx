@@ -16,7 +16,7 @@ import { companyInfo } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Saldu Global Solutions - a Canadian startup bridging Western industrial innovation with Middle Eastern markets.",
+    "Learn about Saldu Global Solutions - our mission, vision, and commitment to providing innovative industrial and trading solutions worldwide.",
 };
 
 export default function AboutPage() {
@@ -25,7 +25,7 @@ export default function AboutPage() {
       <Hero
         size="small"
         title="About Saldu"
-        subtitle="A Canadian startup dedicated to bridging Western industrial innovation with Middle Eastern and emerging market demand."
+        subtitle="A global procurement and trading company bridging industrial innovation with market demand across borders."
         badge="Our Story"
       />
 
@@ -68,9 +68,9 @@ export default function AboutPage() {
               <SectionHeader
                 centered={false}
                 label="Who We Are"
-                title="Canadian"
+                title="Global"
                 highlight="Expertise"
-                description="Saldu Global Solutions is a Toronto-based procurement and trading startup built to bridge the gap between Western industry and Eastern markets."
+                description="Saldu Global Solutions is a procurement and trading company built to bridge the gap between Western industry and Eastern markets."
               />
 
               <div className="space-y-4 text-navy-300 leading-relaxed">
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 {
                   icon: Globe,
                   title: "Global Reach",
-                  desc: "Operations spanning 7+ regions",
+                  desc: "Multi-continent operations",
                 },
                 {
                   icon: Shield,
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 {
                   icon: Handshake,
                   title: "Partnerships",
-                  desc: "36+ manufacturer partners",
+                  desc: "Extensive manufacturer network",
                 },
                 {
                   icon: Award,

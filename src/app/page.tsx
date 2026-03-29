@@ -2,10 +2,10 @@ import Link from "next/link";
 import {
   ArrowRight,
   ChevronRight,
+  Zap,
   Globe,
   Shield,
-  Clock,
-  Users,
+  Truck,
 } from "lucide-react";
 import Hero from "@/components/Hero";
 import SectionHeader from "@/components/SectionHeader";
@@ -16,31 +16,54 @@ export default function Home() {
     <>
       {/* Hero */}
       <Hero
-        badge="Canadian Startup"
+        badge="Global Trading Solutions"
         title="Bridging Western Industry"
         highlight="with Eastern Markets"
-        subtitle="Saldu connects North American and European industrial suppliers with the Middle East and emerging markets through innovative procurement and trading solutions."
+        subtitle="Saldu connects North American and European industrial suppliers with the Middle East and emerging markets through procurement and trading solutions."
         primaryCTA={{ label: "Our Divisions", href: "/divisions" }}
         secondaryCTA={{ label: "Explore Services", href: "/services" }}
       />
 
-      {/* Stats Bar */}
+      {/* Value Props - not fake stats, just what we do */}
       <section className="relative z-10 -mt-8 lg:-mt-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 bg-navy-800 rounded-2xl p-6 lg:p-8 border border-navy-700">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { icon: Globe, value: "7+", label: "Global Regions" },
-              { icon: Shield, value: "36+", label: "Brand Partners" },
-              { icon: Clock, value: "24/7", label: "Availability" },
-              { icon: Users, value: "9+", label: "Industries Served" },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <stat.icon size={20} className="mx-auto text-gold-500 mb-2" />
-                <div className="text-2xl lg:text-3xl font-bold text-white">
-                  {stat.value}
+              {
+                icon: Globe,
+                title: "Cross-Border Procurement",
+                desc: "NA, EU, Middle East, Asia",
+              },
+              {
+                icon: Zap,
+                title: "Energy & Industrial",
+                desc: "Oil, gas, power, automation",
+              },
+              {
+                icon: Truck,
+                title: "End-to-End Logistics",
+                desc: "Sourcing through delivery",
+              },
+              {
+                icon: Shield,
+                title: "Quality Assured",
+                desc: "Vetted manufacturer network",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-navy-800 border border-navy-700 rounded-xl p-5 flex items-start gap-4"
+              >
+                <div className="w-10 h-10 rounded-lg bg-navy-700 flex items-center justify-center shrink-0">
+                  <item.icon size={18} className="text-gold-500" />
                 </div>
-                <div className="text-sm text-navy-400 mt-0.5">
-                  {stat.label}
+                <div>
+                  <div className="text-sm font-semibold text-white">
+                    {item.title}
+                  </div>
+                  <div className="text-xs text-navy-400 mt-0.5">
+                    {item.desc}
+                  </div>
                 </div>
               </div>
             ))}
@@ -151,9 +174,9 @@ export default function Home() {
                 About Saldu
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
-                Your Canadian Partner for{" "}
+                Your Partner for{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">
-                  Cross-Border Trade
+                  Global Procurement
                 </span>
               </h2>
               <p className="mt-6 text-navy-300 leading-relaxed">
@@ -167,7 +190,7 @@ export default function Home() {
                 {[
                   { label: "Quality Assured", desc: "Rigorous standards" },
                   { label: "Cost Effective", desc: "Competitive pricing" },
-                  { label: "Toronto Based", desc: "Canadian headquarters" },
+                  { label: "Global Logistics", desc: "Source to delivery" },
                   { label: "Expert Team", desc: "Industry specialists" },
                 ].map((item, i) => (
                   <div key={i}>
@@ -190,38 +213,38 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-navy-800 to-navy-700 rounded-2xl flex items-center justify-center border border-navy-600">
-                <div className="text-center p-8">
-                  <svg
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-20 h-20 mx-auto mb-6"
-                  >
-                    <rect width="48" height="48" rx="10" fill="url(#gold-grad-about)" />
-                    <path d="M14 18.5C14 15.5 16.5 13 20 13C23.5 13 25.5 15 25.5 17.5C25.5 22 14 20.5 14 26.5C14 29.5 16.5 31.5 20 31.5" stroke="#0A1628" strokeWidth="3.2" strokeLinecap="round" />
-                    <path d="M34 11V31.5" stroke="#0A1628" strokeWidth="3.2" strokeLinecap="round" />
-                    <path d="M34 26C34 29 31.5 31.5 28.5 31.5C25.5 31.5 23 29 23 26C23 23 25.5 20.5 28.5 20.5C31.5 20.5 34 23 34 26Z" stroke="#0A1628" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M20 31.5C22 35 26 36 29 35" stroke="#0A1628" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
-                    <defs>
-                      <linearGradient id="gold-grad-about" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#D4A843" />
-                        <stop offset="1" stopColor="#B8912A" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    Saldu Global Solutions
-                  </h3>
-                  <p className="text-navy-400 text-sm">
-                    Toronto, Canada &mdash; connecting Western suppliers with
-                    Middle Eastern markets.
-                  </p>
+            {/* Markets we serve - replaces the big logo box */}
+            <div className="space-y-6">
+              <div className="bg-navy-800 rounded-2xl border border-navy-700 p-8">
+                <h3 className="text-sm font-semibold text-gold-500 uppercase tracking-wider mb-5">
+                  Markets We Serve
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {companyInfo.markets.map((market, i) => (
+                    <span
+                      key={i}
+                      className="px-4 py-2 bg-navy-900 border border-navy-700 text-navy-200 rounded-lg text-sm font-medium"
+                    >
+                      {market}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gold-500/5 rounded-2xl -z-10" />
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-500/5 rounded-2xl -z-10" />
+              <div className="bg-navy-800 rounded-2xl border border-navy-700 p-8">
+                <h3 className="text-sm font-semibold text-gold-500 uppercase tracking-wider mb-5">
+                  Regions
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {companyInfo.regions.map((region, i) => (
+                    <span
+                      key={i}
+                      className="px-4 py-2 bg-gold-500/10 border border-gold-500/20 text-gold-400 rounded-lg text-sm font-medium"
+                    >
+                      {region}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -232,7 +255,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="text-sm font-semibold text-navy-400 uppercase tracking-wider">
-              Trusted by industry leaders worldwide
+              Manufacturer & supplier network
             </p>
           </div>
 

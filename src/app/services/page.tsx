@@ -156,28 +156,38 @@ export default function ServicesPage() {
               </ul>
             </div>
 
-            <div className="bg-navy-800 rounded-2xl p-10 text-center border border-navy-700">
-              <div className="text-6xl font-bold text-gold-500 mb-2">100%</div>
-              <div className="text-lg font-semibold text-white mb-1">
-                Client Satisfaction
+            <div className="bg-navy-800 rounded-2xl p-8 border border-navy-700 space-y-6">
+              <div className="border-l-2 border-gold-500 pl-5">
+                <h3 className="text-sm font-bold text-white mb-1">
+                  Procurement Management
+                </h3>
+                <p className="text-xs text-navy-400">
+                  Full lifecycle sourcing, negotiation, and delivery coordination
+                </p>
               </div>
-              <div className="text-sm text-navy-400">
-                Our most important business objective
+              <div className="border-l-2 border-gold-500 pl-5">
+                <h3 className="text-sm font-bold text-white mb-1">
+                  Cross-Border Logistics
+                </h3>
+                <p className="text-xs text-navy-400">
+                  Seamless import/export between NA, EU, and Middle Eastern markets
+                </p>
               </div>
-
-              <div className="mt-10 grid grid-cols-2 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-white">7+</div>
-                  <div className="text-xs text-navy-400 mt-1">
-                    Regions Served
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-white">36+</div>
-                  <div className="text-xs text-navy-400 mt-1">
-                    Brand Partners
-                  </div>
-                </div>
+              <div className="border-l-2 border-gold-500 pl-5">
+                <h3 className="text-sm font-bold text-white mb-1">
+                  Manufacturer Network
+                </h3>
+                <p className="text-xs text-navy-400">
+                  Direct access to vetted suppliers across major industrial brands
+                </p>
+              </div>
+              <div className="border-l-2 border-gold-500 pl-5">
+                <h3 className="text-sm font-bold text-white mb-1">
+                  Technical Consultation
+                </h3>
+                <p className="text-xs text-navy-400">
+                  Specification review and product selection guidance
+                </p>
               </div>
             </div>
           </div>
