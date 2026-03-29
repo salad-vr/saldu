@@ -11,17 +11,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Saldu - Global Industrial & Trading Solutions",
+    default: "Saldu - Bridging Western Industry with Eastern Markets",
     template: "%s | Saldu",
   },
   description:
-    "Saldu is a global procurement and trading solutions company supplying innovative industrial equipment and services across energy, healthcare, IT, and more.",
+    "Saldu is a Canadian procurement and trading solutions startup connecting North American industrial suppliers with the Middle East and emerging markets.",
   keywords: [
     "industrial solutions",
     "global trading",
     "oil and gas equipment",
     "procurement",
-    "energy solutions",
+    "Canada Middle East trade",
     "industrial equipment",
   ],
 };
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-sans antialiased bg-white text-navy-900">
+      <body className="font-sans antialiased bg-navy-900 text-white">
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

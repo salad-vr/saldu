@@ -49,42 +49,42 @@ export const divisions: Division[] = [
   {
     title: "Energy",
     description:
-      "Cutting-edge solutions for the oil & gas and industrial energy sector. From upstream exploration to downstream refining, we supply the equipment that powers global energy infrastructure.",
+      "Cutting-edge solutions for the oil & gas and industrial energy sector. From upstream exploration to downstream refining, we bridge Western technology with Middle Eastern energy infrastructure.",
     icon: Zap,
     image: "/images/energy.svg",
   },
   {
     title: "Health",
     description:
-      "Medical equipment and healthcare goods supplier to hospitals, clinics, and companies worldwide. Tailored procurement solutions for the healthcare industry.",
+      "Medical equipment and healthcare goods supplier to hospitals, clinics, and companies across the Middle East, sourced from leading North American and European manufacturers.",
     icon: Heart,
     image: "/images/health.svg",
   },
   {
     title: "Global Trade",
     description:
-      "Import and export facilitation across North America, the Arabian Gulf, the Middle East, Africa, and Asia. Bridging markets with seamless logistics and procurement.",
+      "Import and export facilitation between Canada, the Arabian Gulf, the Middle East, Africa, and Asia. We are the bridge that connects Western suppliers to Eastern markets.",
     icon: Globe,
     image: "/images/trade.svg",
   },
   {
     title: "IT Security",
     description:
-      "Protection of computer systems and networks from theft or damage to hardware, software, and electronic data. Enterprise-grade cybersecurity solutions.",
+      "Protection of computer systems and networks from theft or damage to hardware, software, and electronic data. Enterprise-grade cybersecurity solutions for critical infrastructure.",
     icon: Shield,
     image: "/images/security.svg",
   },
   {
     title: "Payment Solutions",
     description:
-      "Direct payment processing for e-businesses, online retailers, and traditional brick-and-mortar operations. Secure and reliable transaction infrastructure.",
+      "Direct payment processing for e-businesses, online retailers, and traditional brick-and-mortar operations. Secure and reliable cross-border transaction infrastructure.",
     icon: CreditCard,
     image: "/images/payments.svg",
   },
   {
     title: "Special Projects",
     description:
-      "Custom-tailored projects designed to meet unique client requirements. From concept to delivery, we engineer solutions for complex industrial challenges.",
+      "Custom-tailored projects designed to meet unique client requirements. From concept to delivery, we engineer solutions for complex industrial and cross-border challenges.",
     icon: Briefcase,
     image: "/images/projects.svg",
   },
@@ -288,15 +288,16 @@ export const partners: Partner[] = [
 export const companyInfo = {
   name: "Saldu",
   fullName: "Saldu Global Solutions",
-  tagline: "Providing Global Industrial & Trading Solutions",
+  tagline: "Bridging Western Industry with Eastern Markets",
   description:
-    "Saldu is a global procurement and trading solutions company dedicated to supplying innovative, high-quality, and cost-effective industrial equipment and services worldwide.",
+    "Saldu is a Canadian startup specializing in procurement and trading solutions that connect North American and European industrial suppliers with the Middle East, Arabian Gulf, and emerging markets.",
   mission:
-    "To provide innovative, qualitative, cost-effective, and safe solutions to all our stakeholders by preserving world energy resources, infrastructure, and environment.",
+    "To bridge the gap between Western industrial innovation and Middle Eastern market demand, providing cost-effective, high-quality procurement solutions that create lasting partnerships across borders.",
   vision:
-    "To be the most trusted global partner for industrial procurement and technology solutions, connecting businesses across continents with the equipment and expertise they need to thrive.",
-  email: "info@saldu.com",
-  phone: "+1 (800) 555-SALD",
+    "To become the most trusted cross-border procurement partner between Canada and the Middle East, building trade corridors that empower industries on both sides to grow and succeed.",
+  email: "info@saldu.ca",
+  phone: "+1 (647) 555-2583",
+  location: "Toronto, Ontario, Canada",
   markets: [
     "Oil & Gas",
     "Power Generation",
@@ -309,7 +310,8 @@ export const companyInfo = {
     "Healthcare",
   ],
   regions: [
-    "North America",
+    "Canada",
+    "United States",
     "Middle East",
     "Arabian Gulf",
     "Africa",

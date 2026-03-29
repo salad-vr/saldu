@@ -16,7 +16,7 @@ import { companyInfo } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Saldu Global Solutions - our mission, vision, and commitment to providing innovative industrial and trading solutions worldwide.",
+    "Learn about Saldu Global Solutions - a Canadian startup bridging Western industrial innovation with Middle Eastern markets.",
 };
 
 export default function AboutPage() {
@@ -25,36 +25,34 @@ export default function AboutPage() {
       <Hero
         size="small"
         title="About Saldu"
-        subtitle="A global procurement and trading solutions company dedicated to connecting industries worldwide with the equipment and expertise they need."
+        subtitle="A Canadian startup dedicated to bridging Western industrial innovation with Middle Eastern and emerging market demand."
         badge="Our Story"
       />
 
       {/* Mission & Vision */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Mission */}
-            <div className="bg-white rounded-2xl border border-navy-100 p-8 lg:p-10">
+            <div className="bg-navy-800 rounded-2xl border border-navy-700 p-8 lg:p-10">
               <div className="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center mb-6">
-                <Target size={28} className="text-gold-600" />
+                <Target size={28} className="text-gold-500" />
               </div>
-              <h2 className="text-2xl font-bold text-navy-900 mb-4">
+              <h2 className="text-2xl font-bold text-white mb-4">
                 Our Mission
               </h2>
-              <p className="text-navy-500 leading-relaxed text-lg">
+              <p className="text-navy-300 leading-relaxed text-lg">
                 {companyInfo.mission}
               </p>
             </div>
 
-            {/* Vision */}
-            <div className="bg-white rounded-2xl border border-navy-100 p-8 lg:p-10">
-              <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6">
-                <Eye size={28} className="text-blue-600" />
+            <div className="bg-navy-800 rounded-2xl border border-navy-700 p-8 lg:p-10">
+              <div className="w-14 h-14 rounded-xl bg-gold-500/10 flex items-center justify-center mb-6">
+                <Eye size={28} className="text-gold-500" />
               </div>
-              <h2 className="text-2xl font-bold text-navy-900 mb-4">
+              <h2 className="text-2xl font-bold text-white mb-4">
                 Our Vision
               </h2>
-              <p className="text-navy-500 leading-relaxed text-lg">
+              <p className="text-navy-300 leading-relaxed text-lg">
                 {companyInfo.vision}
               </p>
             </div>
@@ -63,19 +61,19 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are */}
-      <section className="py-20 lg:py-28 bg-navy-50/50">
+      <section className="py-20 lg:py-28 bg-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <SectionHeader
                 centered={false}
                 label="Who We Are"
-                title="Global Procurement"
+                title="Canadian"
                 highlight="Expertise"
-                description="Saldu Global Solutions is a procurement management and trading company built to serve industries on a global scale."
+                description="Saldu Global Solutions is a Toronto-based procurement and trading startup built to bridge the gap between Western industry and Eastern markets."
               />
 
-              <div className="space-y-4 text-navy-500 leading-relaxed">
+              <div className="space-y-4 text-navy-300 leading-relaxed">
                 <p>
                   We are engaged in the supply of equipment and parts across
                   every aspect of telecommunications, power generation, oil &
@@ -83,14 +81,15 @@ export default function AboutPage() {
                 </p>
                 <p>
                   With partnerships spanning renowned manufacturers and
-                  suppliers across North America, Europe, and Asia, we provide
-                  our clients with access to the world&apos;s best industrial
+                  suppliers across North America, Europe, and Asia, we connect
+                  Middle Eastern buyers with the world&apos;s best industrial
                   equipment at competitive prices.
                 </p>
                 <p>
                   Our team works closely with each client on their specific
                   project requirements and equipment specifications, ensuring
-                  every procurement is handled with expertise and precision.
+                  every cross-border procurement is handled with expertise and
+                  precision.
                 </p>
               </div>
             </div>
@@ -100,7 +99,7 @@ export default function AboutPage() {
                 {
                   icon: Globe,
                   title: "Global Reach",
-                  desc: "Operations spanning 6+ regions",
+                  desc: "Operations spanning 7+ regions",
                 },
                 {
                   icon: Shield,
@@ -120,16 +119,16 @@ export default function AboutPage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl border border-navy-100 p-6 text-center"
+                  className="bg-navy-900 rounded-xl border border-navy-700 p-6 text-center"
                 >
                   <item.icon
                     size={28}
                     className="mx-auto text-gold-500 mb-3"
                   />
-                  <h3 className="text-sm font-bold text-navy-900 mb-1">
+                  <h3 className="text-sm font-bold text-white mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-navy-500">{item.desc}</p>
+                  <p className="text-xs text-navy-400">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -138,7 +137,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="Our Principles"
@@ -174,14 +173,11 @@ export default function AboutPage() {
                 desc: "We are committed to preserving world energy resources, infrastructure, and the environment for future generations.",
               },
             ].map((value, i) => (
-              <div
-                key={i}
-                className="border-l-2 border-gold-500 pl-6 py-2"
-              >
-                <h3 className="text-lg font-bold text-navy-900 mb-2">
+              <div key={i} className="border-l-2 border-gold-500 pl-6 py-2">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {value.title}
                 </h3>
-                <p className="text-sm text-navy-500 leading-relaxed">
+                <p className="text-sm text-navy-400 leading-relaxed">
                   {value.desc}
                 </p>
               </div>
@@ -191,7 +187,7 @@ export default function AboutPage() {
       </section>
 
       {/* Markets We Serve */}
-      <section className="py-20 lg:py-28 bg-navy-900">
+      <section className="py-20 lg:py-28 bg-navy-800 border-t border-navy-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold text-gold-500 uppercase tracking-wider mb-3">
             Industries
@@ -204,7 +200,7 @@ export default function AboutPage() {
             {companyInfo.markets.map((market, i) => (
               <span
                 key={i}
-                className="px-5 py-2.5 bg-navy-800 border border-navy-700 text-navy-200 rounded-full text-sm font-medium"
+                className="px-5 py-2.5 bg-navy-900 border border-navy-700 text-navy-200 rounded-full text-sm font-medium"
               >
                 {market}
               </span>

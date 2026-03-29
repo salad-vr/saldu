@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 };
 
 export default function PartnersPage() {
-  // Group by category
   const categories = partners.reduce<Record<string, typeof partners>>(
     (acc, partner) => {
       if (!acc[partner.category]) acc[partner.category] = [];
@@ -31,16 +30,16 @@ export default function PartnersPage() {
       />
 
       {/* All Partners Grid */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold text-gold-500 uppercase tracking-wider mb-3">
               Our Network
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
               {partners.length}+ Brand Partners
             </h2>
-            <p className="mt-4 text-navy-500 max-w-2xl mx-auto">
+            <p className="mt-4 text-navy-400 max-w-2xl mx-auto">
               Each partner is carefully vetted and selected based on quality,
               reliability, and industry reputation.
             </p>
@@ -50,17 +49,17 @@ export default function PartnersPage() {
             {partners.map((partner, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-xl border border-navy-100 hover:border-gold-300 p-5 flex flex-col items-center justify-center text-center transition-all duration-200 hover:shadow-md"
+                className="group bg-navy-800 rounded-xl border border-navy-700 hover:border-gold-500/40 p-5 flex flex-col items-center justify-center text-center transition-all duration-200"
               >
-                <div className="w-12 h-12 rounded-lg bg-navy-50 group-hover:bg-gold-500/10 flex items-center justify-center mb-3 transition-colors">
-                  <span className="text-lg font-bold text-navy-400 group-hover:text-gold-600 transition-colors">
+                <div className="w-12 h-12 rounded-lg bg-navy-700 group-hover:bg-gold-500/10 flex items-center justify-center mb-3 transition-colors">
+                  <span className="text-lg font-bold text-navy-400 group-hover:text-gold-500 transition-colors">
                     {partner.name.charAt(0)}
                   </span>
                 </div>
-                <span className="text-sm font-semibold text-navy-700">
+                <span className="text-sm font-semibold text-navy-200">
                   {partner.name}
                 </span>
-                <span className="text-[10px] text-navy-400 mt-0.5">
+                <span className="text-[10px] text-navy-500 mt-0.5">
                   {partner.category}
                 </span>
               </div>
@@ -70,10 +69,10 @@ export default function PartnersPage() {
       </section>
 
       {/* By Category */}
-      <section className="py-20 lg:py-28 bg-navy-50/50">
+      <section className="py-20 lg:py-28 bg-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
               Partners by Specialty
             </h2>
           </div>
@@ -82,16 +81,16 @@ export default function PartnersPage() {
             {Object.entries(categories).map(([category, categoryPartners]) => (
               <div
                 key={category}
-                className="bg-white rounded-xl border border-navy-100 p-6"
+                className="bg-navy-900 rounded-xl border border-navy-700 p-6"
               >
-                <h3 className="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">
+                <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-3">
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {categoryPartners.map((p, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1.5 bg-navy-50 text-navy-600 rounded-lg text-xs font-medium"
+                      className="px-3 py-1.5 bg-navy-800 text-navy-300 rounded-lg text-xs font-medium border border-navy-700"
                     >
                       {p.name}
                     </span>
@@ -104,7 +103,7 @@ export default function PartnersPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-navy-900">
+      <section className="py-16 bg-navy-900 border-t border-navy-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white">
             Looking for a Specific{" "}

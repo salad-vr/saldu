@@ -22,15 +22,15 @@ export default function ServicesPage() {
       />
 
       {/* Services Grid */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-xl border border-navy-100 hover:border-gold-300 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-navy-900/5"
+                className="group bg-navy-800 rounded-xl border border-navy-700 hover:border-gold-500/40 overflow-hidden transition-all duration-300"
               >
-                <div className="h-52 bg-gradient-to-br from-navy-800 to-navy-600 relative flex items-center justify-center overflow-hidden">
+                <div className="h-52 bg-gradient-to-br from-navy-700 to-navy-800 relative flex items-center justify-center overflow-hidden">
                   <service.icon
                     size={56}
                     className="text-gold-400/80 group-hover:scale-110 transition-transform duration-500"
@@ -38,21 +38,21 @@ export default function ServicesPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 to-transparent" />
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium text-white">
+                    <span className="px-3 py-1 bg-white/5 backdrop-blur-sm rounded-full text-xs font-medium text-navy-200 border border-navy-600">
                       {service.subtitle}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy-900 mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-navy-500 leading-relaxed mb-4">
+                  <p className="text-sm text-navy-400 leading-relaxed mb-4">
                     {service.description}
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-400 hover:text-gold-300 transition-colors"
                   >
                     Learn More
                     <ArrowRight size={14} />
@@ -65,7 +65,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 lg:py-28 bg-navy-50/50">
+      <section className="py-20 lg:py-28 bg-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="How We Work"
@@ -98,17 +98,17 @@ export default function ServicesPage() {
               },
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="text-5xl font-bold text-navy-100 mb-4">
+                <div className="text-5xl font-bold text-navy-700 mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-bold text-navy-900 mb-2">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-navy-500 leading-relaxed">
+                <p className="text-sm text-navy-400 leading-relaxed">
                   {item.desc}
                 </p>
                 {i < 3 && (
-                  <div className="hidden lg:block absolute top-8 -right-4 w-8 text-navy-200">
+                  <div className="hidden lg:block absolute top-8 -right-4 w-8 text-navy-600">
                     <ArrowRight size={20} />
                   </div>
                 )}
@@ -119,17 +119,17 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-sm font-semibold text-gold-500 uppercase tracking-wider mb-3">
                 Why Saldu
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
                 Reliable, High-Quality Procurement Solutions
               </h2>
-              <p className="mt-4 text-navy-500 leading-relaxed">
+              <p className="mt-4 text-navy-300 leading-relaxed">
                 Saldu offers a reliable, high-quality alternative to in-house
                 procurement. We help maximize your savings, streamline your
                 sourcing process, and optimize available resources on an
@@ -143,20 +143,20 @@ export default function ServicesPage() {
                   "Competitive pricing through bulk purchasing power",
                   "Complete logistics and delivery coordination",
                   "Dedicated account management for each client",
-                  "24/7 support for mission-critical requirements",
+                  "Specialized in Canada-Middle East trade corridors",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle
                       size={20}
-                      className="text-green-500 shrink-0 mt-0.5"
+                      className="text-gold-500 shrink-0 mt-0.5"
                     />
-                    <span className="text-sm text-navy-600">{item}</span>
+                    <span className="text-sm text-navy-300">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-navy-900 rounded-2xl p-10 text-center">
+            <div className="bg-navy-800 rounded-2xl p-10 text-center border border-navy-700">
               <div className="text-6xl font-bold text-gold-500 mb-2">100%</div>
               <div className="text-lg font-semibold text-white mb-1">
                 Client Satisfaction
@@ -167,9 +167,9 @@ export default function ServicesPage() {
 
               <div className="mt-10 grid grid-cols-2 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-white">6+</div>
+                  <div className="text-3xl font-bold text-white">7+</div>
                   <div className="text-xs text-navy-400 mt-1">
-                    Continents Served
+                    Regions Served
                   </div>
                 </div>
                 <div>
@@ -185,7 +185,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-navy-900">
+      <section className="py-16 bg-navy-800 border-t border-navy-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white">
             Ready to Get <span className="text-gold-500">Started?</span>

@@ -21,24 +21,24 @@ export default function ProductsPage() {
       />
 
       {/* Product Categories */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             {productCategories.map((category, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-navy-100 overflow-hidden hover:shadow-lg transition-all duration-300"
+                className="bg-navy-800 rounded-2xl border border-navy-700 overflow-hidden hover:border-navy-600 transition-all duration-300"
               >
                 <div className="p-8 lg:p-10">
                   <div className="flex items-start gap-5 mb-6">
-                    <div className="w-14 h-14 rounded-xl bg-navy-50 flex items-center justify-center shrink-0">
-                      <category.icon size={28} className="text-navy-600" />
+                    <div className="w-14 h-14 rounded-xl bg-navy-700 flex items-center justify-center shrink-0">
+                      <category.icon size={28} className="text-gold-500" />
                     </div>
                     <div>
-                      <h2 className="text-2xl font-bold text-navy-900">
+                      <h2 className="text-2xl font-bold text-white">
                         {category.title}
                       </h2>
-                      <p className="mt-1 text-navy-500">
+                      <p className="mt-1 text-navy-400">
                         {category.description}
                       </p>
                     </div>
@@ -48,18 +48,18 @@ export default function ProductsPage() {
                     {category.items.map((item, j) => (
                       <div
                         key={j}
-                        className="flex items-center gap-3 px-4 py-3 bg-navy-50/50 rounded-lg border border-navy-100/50"
+                        className="flex items-center gap-3 px-4 py-3 bg-navy-900/50 rounded-lg border border-navy-700/50"
                       >
                         <div className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0" />
-                        <span className="text-sm text-navy-700">{item}</span>
+                        <span className="text-sm text-navy-300">{item}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-navy-100">
+                  <div className="mt-6 pt-6 border-t border-navy-700">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-gold-400 hover:text-gold-300 transition-colors"
                     >
                       Request a Quote for {category.title}
                       <ArrowRight size={14} />
@@ -73,12 +73,12 @@ export default function ProductsPage() {
       </section>
 
       {/* Manufacturers Note */}
-      <section className="py-16 bg-navy-50/50 border-t border-navy-100">
+      <section className="py-16 bg-navy-800 border-t border-navy-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-2xl font-bold text-navy-900 mb-4">
+          <h3 className="text-2xl font-bold text-white mb-4">
             Can&apos;t Find What You Need?
           </h3>
-          <p className="text-navy-500 leading-relaxed">
+          <p className="text-navy-400 leading-relaxed">
             Our product range extends far beyond what is listed here. With
             partnerships across 36+ manufacturers and suppliers in North America,
             Europe, and Asia, we can source virtually any industrial equipment or
@@ -87,7 +87,7 @@ export default function ProductsPage() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/partners"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-navy-200 hover:border-navy-300 text-navy-700 font-semibold rounded-lg transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-navy-600 hover:border-navy-500 text-white font-semibold rounded-lg transition-all duration-200"
             >
               View Our Partners
             </Link>

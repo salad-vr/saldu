@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import Logo from "@/components/Logo";
 import { companyInfo } from "@/lib/data";
 
 export default function Footer() {
@@ -39,13 +40,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center font-bold text-navy-900 text-lg">
-                S
-              </div>
-              <span className="text-xl font-bold text-white tracking-tight">
-                Sal<span className="text-gold-500">du</span>
-              </span>
+            <Link href="/" className="inline-block mb-4">
+              <Logo size="sm" />
             </Link>
             <p className="text-navy-400 text-sm leading-relaxed mb-6">
               {companyInfo.description}
