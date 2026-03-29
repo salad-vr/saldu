@@ -48,12 +48,9 @@ export default function Hero({
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`max-w-4xl ${isLarge ? "" : "mx-auto text-center"}`}>
           {badge && (
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" />
-              <span className="text-xs font-medium text-gold-400 uppercase tracking-wider">
-                {badge}
-              </span>
-            </div>
+            <p className="text-sm font-medium text-gold-500 uppercase tracking-wider mb-4">
+              {badge}
+            </p>
           )}
 
           <h1
