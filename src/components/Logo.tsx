@@ -1,9 +1,15 @@
+"use client";
+
+import { useId } from "react";
+
 interface LogoProps {
   size?: "sm" | "md" | "lg";
   className?: string;
 }
 
 export default function Logo({ size = "md", className = "" }: LogoProps) {
+  const uid = useId();
+
   const dimensions = {
     sm: { mark: "w-8 h-8", text: "text-lg", gap: "gap-2" },
     md: { mark: "w-10 h-10", text: "text-2xl", gap: "gap-2.5" },
@@ -11,46 +17,49 @@ export default function Logo({ size = "md", className = "" }: LogoProps) {
   };
 
   const d = dimensions[size];
-  const uid = `logo-${size}-${Math.random().toString(36).slice(2, 6)}`;
 
   return (
     <span className={`inline-flex items-center ${d.gap} ${className}`}>
       <svg
-        viewBox="0 0 40 40"
+        viewBox="0 0 36 36"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={d.mark}
         aria-label="Saldu logo"
       >
-        <rect width="40" height="40" rx="8" fill={`url(#${uid})`} />
-        {/* S - clean geometric S curve */}
+        <rect width="36" height="36" rx="8" fill={`url(#${uid})`} />
+
+        {/* S - two arcs forming a clean S shape */}
         <path
-          d="M11 15c0-2.2 2-4 4.5-4s4 1.5 4 3.5c0 4-8.5 2.5-8.5 7.5 0 2.2 2 4 4.5 4"
+          d="M16.5 11.5H12c-1.7 0-3 1.3-3 3s1.3 3 3 3h3c1.7 0 3 1.3 3 3s-1.3 3-3 3H10.5"
           stroke="#0A1628"
-          strokeWidth="2.8"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        {/* d - ascender stem */}
+        <path
+          d="M27.5 8.5v16"
+          stroke="#0A1628"
+          strokeWidth="2.5"
           strokeLinecap="round"
         />
-        {/* d - bowl + ascender */}
+        {/* d - bowl */}
         <path
-          d="M28 9v19"
+          d="M27.5 19c0-2.5-2-4.5-4.5-4.5s-4.5 2-4.5 4.5 2 4.5 4.5 4.5 4.5-2 4.5-4.5Z"
           stroke="#0A1628"
-          strokeWidth="2.8"
-          strokeLinecap="round"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
         />
-        <circle
-          cx="24"
-          cy="22"
-          r="4.5"
-          stroke="#0A1628"
-          strokeWidth="2.8"
-        />
+
         <defs>
           <linearGradient
             id={uid}
             x1="0"
             y1="0"
-            x2="40"
-            y2="40"
+            x2="36"
+            y2="36"
             gradientUnits="userSpaceOnUse"
           >
             <stop stopColor="#E0BD63" />
