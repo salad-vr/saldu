@@ -16,59 +16,61 @@ export default function Logo({ size = "md", className = "" }: LogoProps) {
     lg: { mark: "w-14 h-14", text: "text-3xl", gap: "gap-3" },
   };
 
-  const d = dimensions[size];
+  const s = dimensions[size];
+  const sw = 2.4;
 
   return (
-    <span className={`inline-flex items-center ${d.gap} ${className}`}>
+    <span className={`inline-flex items-center ${s.gap} ${className}`}>
       <svg
         viewBox="0 0 36 36"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={d.mark}
+        className={s.mark}
         aria-label="Saldu logo"
       >
+        {/* Background */}
         <rect width="36" height="36" rx="8" fill={`url(#${uid})`} />
 
-        {/* S - two arcs forming a clean S shape */}
+        {/* S — top arc bows right, bottom arc bows left */}
         <path
-          d="M16.5 11.5H12c-1.7 0-3 1.3-3 3s1.3 3 3 3h3c1.7 0 3 1.3 3 3s-1.3 3-3 3H10.5"
+          d="M14.8 10.5h-2c-2 0-3.6 1.6-3.6 3.6 0 2 1.6 3.6 3.6 3.6h2c2 0 3.6 1.6 3.6 3.6 0 2-1.6 3.6-3.6 3.6h-2"
           stroke="#0A1628"
-          strokeWidth="2.5"
+          strokeWidth={sw}
           strokeLinecap="round"
-          strokeLinejoin="round"
         />
 
-        {/* d - ascender stem */}
+        {/* d — ascender */}
         <path
-          d="M27.5 8.5v16"
+          d="M28.2 9v16.5"
           stroke="#0A1628"
-          strokeWidth="2.5"
+          strokeWidth={sw}
           strokeLinecap="round"
         />
-        {/* d - bowl */}
+
+        {/* d — bowl */}
         <path
-          d="M27.5 19c0-2.5-2-4.5-4.5-4.5s-4.5 2-4.5 4.5 2 4.5 4.5 4.5 4.5-2 4.5-4.5Z"
+          d="M28.2 21.2a4.2 4.2 0 1 0-8.4 0 4.2 4.2 0 1 0 8.4 0Z"
           stroke="#0A1628"
-          strokeWidth="2.5"
-          strokeLinejoin="round"
+          strokeWidth={sw}
         />
 
         <defs>
           <linearGradient
             id={uid}
-            x1="0"
-            y1="0"
-            x2="36"
-            y2="36"
+            x1="4"
+            y1="4"
+            x2="34"
+            y2="34"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#E0BD63" />
-            <stop offset="1" stopColor="#B8912A" />
+            <stop stopColor="#EACC7A" />
+            <stop offset="0.5" stopColor="#D4A843" />
+            <stop offset="1" stopColor="#A67E1E" />
           </linearGradient>
         </defs>
       </svg>
       <span
-        className={`${d.text} font-bold text-white tracking-tight leading-none`}
+        className={`${s.text} font-bold text-white tracking-tight leading-none`}
       >
         Sal<span className="text-gold-400">du</span>
       </span>
